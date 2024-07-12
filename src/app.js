@@ -15,4 +15,12 @@ app.use(express.urlencoded({extended:true,limit:"15kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+
+//routes importing
+import userRouter from './routes/user.Routes.js'
+
+//route declaration..previously we used to write app.get to declare routes but now we do use of middlewares
+app.use("/api/v1/users",userRouter)
+
+
 export {app};
