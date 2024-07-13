@@ -1,7 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary';
 import  fs from 'fs'
 
-(async function() {
+const uploadOnCloudinary = (async function() {
 
     // Configuration
     cloudinary.config({ 
@@ -29,7 +29,7 @@ import  fs from 'fs'
         quality: 'auto'
     });
     
-    console.log(optimizeUrl);
+    //console.log(optimizeUrl);
     
     // Transform the image: auto-crop to square aspect_ratio
     const autoCropUrl = cloudinary.url('shoes', {
@@ -39,5 +39,7 @@ import  fs from 'fs'
         height: 500,
     });
     
-    console.log(autoCropUrl);    
+    //console.log(autoCropUrl);    
 })();
+
+export {uploadOnCloudinary}
