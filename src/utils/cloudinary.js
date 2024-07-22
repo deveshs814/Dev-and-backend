@@ -21,7 +21,7 @@ const uploadOnCloudinary = (async function() {
            console.log(error);
        });
     
-    console.log(uploadResult);
+   // console.log(uploadResult);
     
     // Optimize delivery by resizing and applying auto-format and auto-quality
     const optimizeUrl = cloudinary.url('shoes', {
